@@ -9,20 +9,19 @@
       </nav>
     </header>
 
-    <div class="black-bg" v-if="modal == true">
+    <div class="black-bg" v-if="modal !== null">
       <div class="white-bg">
         <h2>상세페이지</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem expedita officia consequuntur voluptate dignissimos architecto dolores eaque minus, cupiditate asperiores unde reprehenderit quisquam ut incidunt dicta dolore odio quidem? Magnam.</p>
-        <button @click="modal = false">닫기</button>
+        <p>{{ data[modal].content }}</p>
+        <button @click="closeModal">닫기</button>
       </div>
     </div>
 
     <div class="grid-box">
       <div v-for="(p,i) in data" :key="i" class="room-box">
-        <img :src="data[i].image" alt="" class="room-img">
-        <h5 @click="modal = true" class="title">{{ data[i].title }}</h5>
-        <p class="price">가격 : {{ data[i].price }}원</p>
-        <p class="declaration"><button @click="increase(i)">허위매물신고</button> <span>신고수 : {{num[i]}}</span></p>
+        <img :src="p.image" alt="" class="room-img">
+        <h5 @click="openModal(i)" class="title">{{ p.title }}</h5>
+        <p class="price">가격 : {{ p.price }}원</p>
       </div>
     </div>
   </div>
@@ -36,16 +35,16 @@ export default {
   data(){
     return{
       data : data,
-      modal : false,
-      num : [0,0,0,0,0,0,0,0,0,0,0],
-      menu :['Home', 'Shop', 'About'],
-      products : ['역삼동원룸', '천호동원룸', '마포구원룸','남동구원룸','부평구원룸','논현동원룸','미추홀구원룸','노원구원룸','송도원룸','만수동원룸','그냥원룸'],
-      price : ['50', '60', '70','80','55','75','100','50','88','90','0.1'],
+      modal : null,
+      menu :['Home', 'Shop', 'About']
     }
   },
   methods: {
-    increase(index) {
-      this.num[index]++;
+    openModal(index) {
+      this.modal = index;
+    },
+    closeModal() {
+      this.modal = null;
     }
   },
   components: {
@@ -118,15 +117,17 @@ nav a{
 
 .room-box{
   width: 300px;
-  height: 300px;
+  height: 250px;
   margin: 20px 10px;
   background-color: #eee;
   border-radius: 20px;
   overflow: hidden;
+  padding: 10px;
 }
 
 .room-box > .room-img{
   width: 100%;
   height: 150px;
+  border-radius: 15px;
 }
 </style>
