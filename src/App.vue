@@ -116,7 +116,7 @@ nav a{
 }
 
 .room-box{
-  width: 300px;
+  width: 280px;
   height: 250px;
   margin: 20px 10px;
   background-color: #eee;
@@ -129,5 +129,9 @@ nav a{
   width: 100%;
   height: 150px;
   border-radius: 15px;
+}
+
+.room-box > .title{
+  cursor: pointer;
 }
 </style>
