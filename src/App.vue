@@ -110,12 +110,13 @@ nav a{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .room-box{
   width: 300px;
   height: 300px;
-  margin: 27.5px;
+  margin: 20px 10px;
   background-color: #eee;
   border-radius: 20px;
   overflow: hidden;
