@@ -18,10 +18,10 @@
     </div>
 
     <div class="grid-box">
-      <div v-for="(p,i) in products" :key="i" class="room-box">
-        <img :src="require(`./assets/room${i}.jpg`)" alt="" class="room-img">
-        <h4 @click="modal = true" class="title">{{ p }}</h4>
-        <p class="price">가격 : {{ price[i] }}만원</p>
+      <div v-for="(p,i) in data" :key="i" class="room-box">
+        <img :src="data[i].image" alt="" class="room-img">
+        <h5 @click="modal = true" class="title">{{ data[i].title }}</h5>
+        <p class="price">가격 : {{ data[i].price }}원</p>
         <p class="declaration"><button @click="increase(i)">허위매물신고</button> <span>신고수 : {{num[i]}}</span></p>
       </div>
     </div>
@@ -29,10 +29,13 @@
 </template>
 
 <script>
+import data from './data/post.js'
+
 export default {
   name: 'App',
   data(){
     return{
+      data : data,
       modal : false,
       num : [0,0,0,0,0,0,0,0,0,0,0],
       menu :['Home', 'Shop', 'About'],
