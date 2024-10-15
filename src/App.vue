@@ -23,8 +23,8 @@ export default {
     }
   },
   methods: {
-    increase(index){
-      this.$set(this.num, index, this.num[index] + 1);
+    increase(index) {
+      this.num[index]++;
     }
   },
   components: {
