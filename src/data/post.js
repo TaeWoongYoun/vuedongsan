@@ -68,5 +68,13 @@ export default [
         image: require('@/assets/room9.jpg'),
         content: "홍대역 근처 조용한 스튜디오, 감각적인 인테리어",
         price: "620,000"
+    },
+    {
+        id: 10,
+        title: "Suburban Cheap Room",
+        image: require('@/assets/room10.jpg'),
+        content: "교외에 위치한 저렴한 방입니다. 청소가 잘 안 되어 있고 곰팡이가 약간 보입니다.",
+        price: "20,000"
     }
+    
 ];
