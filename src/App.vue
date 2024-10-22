@@ -66,7 +66,7 @@ body{
 }
 
 header{
-  background: darkslateblue;
+  background: darkblue;
   color: #fff;
   display: flex;
   align-items: center;
