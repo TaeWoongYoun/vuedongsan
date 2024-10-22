@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+
     <AppHeader />
+
     <div class="black-bg" v-if="modal !== null">
       <div class="white-bg">
         <h2>상세페이지</h2>
@@ -16,12 +18,16 @@
         <p class="price">가격 : {{ p.price }}원</p>
       </div>
     </div>
+
+    <AppFooter />
+    
   </div>
 </template>
 
 <script>
 import data from './data/post.js'
 import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
@@ -41,7 +47,8 @@ export default {
     }
   },
   components: {
-    AppHeader
+    AppHeader,
+    AppFooter
   }
 }
 </script>
