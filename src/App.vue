@@ -1,14 +1,6 @@
 <template>
   <div id="app">
-    <header>
-      <div class="logo">
-        <h1>Vuedongsan</h1>
-      </div>
-      <nav>
-        <a href="#" v-for="(a,i) in menu" :key="i">{{ a }}</a>
-      </nav>
-    </header>
-
+    <AppHeader />
     <div class="black-bg" v-if="modal !== null">
       <div class="white-bg">
         <h2>상세페이지</h2>
@@ -29,6 +21,7 @@
 
 <script>
 import data from './data/post.js'
+import AppHeader from './components/AppHeader.vue';
 
 export default {
   name: 'App',
@@ -48,6 +41,7 @@ export default {
     }
   },
   components: {
+    AppHeader
   }
 }
 </script>
@@ -63,28 +57,6 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-header{
-  background: darkblue;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo{
-  width: 300px;
-}
-
-nav{
-  width: 300px;
-}
-
-nav a{
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
 }
 
 .black-bg{
