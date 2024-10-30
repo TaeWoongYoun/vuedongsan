@@ -1,4 +1,3 @@
-![header](https://capsule-render.vercel.app/api?type=Rect&height=200&text=vuedongsan-project&fontSize=70&color=42b983&stroke=FFF&fontColor=fff)
 # 뷰동산 (Vuedongsan)
 ![Vuedongsan Logo](./src/assets/logo.png)
 
@@ -9,7 +8,7 @@
 ## 기능
 
 - **방 정보 조회**: 사용자는 다양한 방의 정보를 확인할 수 있습니다.
-- **상세 페이지**: 방의 이미지를 클릭하면 상세 페이지가 열립니다.
+- **상세 페이지**: 방의 제목을 클릭하면 상세 페이지가 열립니다.
 
 ## 기술 스택
 
